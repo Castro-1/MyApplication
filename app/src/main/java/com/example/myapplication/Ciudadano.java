@@ -1,27 +1,45 @@
 package com.example.myapplication;
 
 public class Ciudadano {
-    private int celular;
-    private int id;
+    private String celular;
+    private String id;
+    private String nombre;
 
-    public Ciudadano(int id,int tel){
-        this.celular=tel;
+    public static Ciudadano civil[] = new Ciudadano[10];
+
+    public Ciudadano(){
+        this.celular="3215467896";
+        this.id="1000435678";
     }
 
-    public int getCelular(){
+    public Ciudadano(String id,String tel){
+        this.id=id;
+        this.celular=tel;
+        this.nombre = "Pepito Perez";
+    }
+
+    public String getCelular(){
         return this.celular;
     }
 
-    public int setCelular(int tel){
+    public String setCelular(String tel){
         this.celular=tel;
         return this.celular;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return id;
     }
 
-    public void setCedula(int id) {
+    public void setCedula(String id) {
         this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

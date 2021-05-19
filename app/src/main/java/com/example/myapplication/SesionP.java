@@ -14,10 +14,7 @@ public class SesionP extends AppCompatActivity {
     EditText cedula;
     Button ingresar;
 
-    String ced = cedula.getText().toString();
-    int cedu = Integer.parseInt(ced);
-    String cel = celular.getText().toString();
-    int celu = Integer.parseInt(cel);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +26,16 @@ public class SesionP extends AppCompatActivity {
         ingresar = (Button) findViewById(R.id.button2);
         Intent i2 = new Intent(this,FuncionesC.class);
 
+        /*String ced = cedula.getText().toString();
+        final int cedu;
+        try {
+            cedu = Integer.parseInt(ced);
+        } catch(NumberFormatException e){
+            System.out.println(e);
+        }
+        String cel = celular.getText().toString();
+        int celu = Integer.parseInt(cel);*/
+
         ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,8 +46,9 @@ public class SesionP extends AppCompatActivity {
                 } else if((celular.getText().length()==10) && (cedula.getText().length()<7 || cedula.getText().length()>10)) {
                     Toast.makeText(SesionP.this, "Cédula incorrecta", Toast.LENGTH_SHORT).show();
                 } else if((celular.getText().length()==10) && (cedula.getText().length()>=7 || cedula.getText().length()<=10)) {
-                    Ciudadano ciudadano = new Ciudadano(cedu,celu);
+                    Ciudadano ciudadano = new Ciudadano(cedula.getText().toString(),celular.getText().toString());
                     Toast.makeText(SesionP.this, "Bienvenido/a", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(SesionP.this,"si"+ciudadano.getCedula(),Toast.LENGTH_LONG).show();
                     startActivity(i2);
                 }
             }

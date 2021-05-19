@@ -1,16 +1,15 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.view.View;
 import android.os.Bundle;
 
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     //instanciar objetos
     //lectura y escritura de archivos en andriod (persistencia)
     //crear otro objeto, llamado civil que tiene get y set cedula, crear metodos save data.
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(log1);
 
     }
-
-
 
     public void policia(View p){
 

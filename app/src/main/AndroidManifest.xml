@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Reporte"></activity>
+        <activity android:name=".Situacion"></activity>
+        <activity android:name=".Reporte" />
         <activity android:name=".LlamadaAuxilio" />
         <activity android:name=".FuncionesP" />
         <activity android:name=".FuncionesC" />

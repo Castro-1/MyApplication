@@ -15,12 +15,7 @@ public class SettingsActivity extends AppCompatActivity {
     EditText placa;
     Button ingresar;
 
-    String ced = cedula.getText().toString();
-    int cedu = Integer.parseInt(ced);
-    String cel = celular.getText().toString();
-    int celu = Integer.parseInt(cel);
-    String pla = placa.getText().toString();
-    int  plac= Integer.parseInt(pla);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +27,13 @@ public class SettingsActivity extends AppCompatActivity {
         placa = (EditText) findViewById(R.id.placa);
         ingresar = (Button) findViewById(R.id.button2);
         Intent i = new Intent(this,FuncionesP.class);
+
+       /* String ced = cedula.getText().toString();
+        int cedu = Integer.parseInt(ced);
+        String cel = celular.getText().toString();
+        int celu = Integer.parseInt(cel);
+        String pla = placa.getText().toString();
+        int  plac= Integer.parseInt(pla);/*/
 
         ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +47,7 @@ public class SettingsActivity extends AppCompatActivity {
                 } else if((celular.getText().length()==10) && (cedula.getText().length()>=7 || cedula.getText().length()<=10) && (placa.getText().length()!=6)) {
                     Toast.makeText(SettingsActivity.this, "Placa incorrecta", Toast.LENGTH_SHORT).show();
                 } else if((celular.getText().length()==10) && (cedula.getText().length()>=7 || cedula.getText().length()<=10) && (placa.getText().length()==6)) {
-                    Policia policia = new Policia(celu,cedu,plac);
+                    //Policia policia = new Policia(celu,cedu,plac);
                     Toast.makeText(SettingsActivity.this, "Bienvenido/a", Toast.LENGTH_SHORT).show();
                     startActivity(i);
                 }
